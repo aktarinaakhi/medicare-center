@@ -1,35 +1,52 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import useAuth from '../hooks/useAuth';
+import { useHistory, useLocation } from 'react-router';
 import './Header.css'
 
 const Header = () => {
+    const { user, googleSignIn, logOut } = useAuth();
+    const history = useHistory();
+    const location = useLocation();
+    const redirect_url = location.state?.from || '/home'
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                history.push(redirect_url);
+            });
+
+    };
+
     return (
         <Navbar collapseOnSelect expand="lg" className="header-container">
             <Container>
-                <Navbar.Brand href="#home">MEDICARE</Navbar.Brand>
+                <Navbar.Brand className="text-light me-5" href="#home">MEDICARE</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#features">Home</Nav.Link>
-                        <Nav.Link href="#pricing">About us</Nav.Link>
-                        <NavDropdown title="Services" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                        </NavDropdown>
-                        <Nav.Link href="#pricing">Doctor</Nav.Link>
-                        <Nav.Link href="#pricing">Contact</Nav.Link>
+                        <Nav.Link className="text-light" as={Link} to="/home">Home</Nav.Link>
+                        <Nav.Link className="text-light" as={Link} to="/home#about">About us</Nav.Link>
+                        <Nav.Link className="text-light" as={Link} to="/home#services">Services</Nav.Link>
+                        <Nav.Link className="text-light" as={Link} to="/home#doctor">Doctor</Nav.Link>
+                        <Nav.Link className="text-light" as={Link} to="/home#contact">Contact</Nav.Link>
 
                     </Nav>
-                    <Nav>s
-                        <button>Login</button>
-                        <button>Sign up</button>
+                    <Nav>
+                        <button className="btn-regular">Sign up</button>
+
+                        {
+                            !user?.email ? <button onClick={handleGoogleSignIn} className="btn-login">Login</button>
+                                :
+                                <div className="d-flex justify-content-center align-items-center"><button onClick={logOut} className="btn-login">logout</button>
+                                    <p>{user.displayName}</p></div>
+
+                        }
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar >
     );
 };
 
