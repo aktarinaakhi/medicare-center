@@ -1,0 +1,11 @@
+img {
+  height: 800px;
+}
+.title {
+  color: #f36438;
+  font-size: 50px;
+}
+.description {
+  color: black;
+  font-size: 30px;
+}

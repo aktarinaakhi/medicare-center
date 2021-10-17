@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import { useHistory, useLocation } from 'react-router';
+import logo from '../../images/medicare-logo-white.png'
 import './Header.css'
 
 const Header = () => {
@@ -22,7 +23,7 @@ const Header = () => {
     return (
         <Navbar collapseOnSelect expand="lg" className="header-container">
             <Container>
-                <Navbar.Brand className="text-light me-5" href="#home">MEDICARE</Navbar.Brand>
+                <Navbar.Brand className="me-5" href="#home"><img className="logo" src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
