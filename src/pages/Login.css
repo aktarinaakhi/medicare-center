@@ -1,0 +1,28 @@
+.input-field {
+  padding: 4px 40px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.btn-social-media {
+  border: none;
+  padding: 10px 0px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.bi {
+  margin-right: 30px;
+}
+.button {
+  border-radius: 10px;
+  border: none;
+  background-color: gray;
+  color: white;
+  margin-bottom: 20px;
+  padding: 5px 20px;
+  font-size: 20px;
+}
+.card img {
+  height: 300px;
+  width: 100%;
+}

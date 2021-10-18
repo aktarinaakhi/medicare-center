@@ -8,14 +8,14 @@ const Footer = () => {
             <div className="layer" >
                 <div>
                     <div className="pb-3"><img className="logo" src={logo} alt="" /></div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae veniam est dolorem eveniet accusantium doloribus. Ab modi sunt libero iste laudantium optio esse, assumenda tenetur, numquam, nihil ratione quis sed.</p>
+                    <p>At Medicare Diagnostic Centre Ltd. We have been actively revamping our technologies with the most modern one since the first day of our journey. All the aged machineries are being regularly replaced with the latest one. Technical team members are maintaining the machineries actively so that these can provide the best outcome.</p>
 
                 </div>
-                <div>
+                <div className="Links">
                     <h4 className="pb-3">Contact Us</h4>
-                    <p>House #16, Road # 2, Dhanmondi R/A, Dhaka-1205,Bangladesh</p>
-                    <p>Phone : 09613 787801, 09666 787801</p>
-                    <p>E-mail : info@populardiagnostic.com</p>
+                    <a href="#">House #16, Road # 2, Dhanmondi R/A, Dhaka-1205,Bangladesh </a>
+                    <a href="#">Phone : 09613 787801, 09666 787801</a>
+                    <a href="#">E-mail : info@populardiagnostic.com</a>
                     <div>
                         <span><i className="bi bi-facebook"></i></span>
                         <span><i className="bi bi-youtube"></i></span>

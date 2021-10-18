@@ -9,3 +9,9 @@ img {
   color: black;
   font-size: 30px;
 }
+
+@media only screen and (max-width: 688px) {
+  img {
+    height: 500px;
+  }
+}
