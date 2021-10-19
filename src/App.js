@@ -5,11 +5,9 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer';
 import Home from "./pages/Home"
 import NotFound from './pages/NotFound';
-// import Services from './pages/Services'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp';
 import ServiceDetails from './pages/ServiceDetails/ServiceDetails';
-// import Doctor from './pages/OurTeam';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 
 
@@ -32,10 +30,6 @@ function App() {
           <PrivateRoute exact path="/serviceDetails/:serviceId">
             <ServiceDetails></ServiceDetails>
           </PrivateRoute>
-
-          {/* <Route exact path="/doctor">
-            <Doctor></Doctor>
-          </Route> */}
 
           <Route exact path="/login">
             <Login></Login>

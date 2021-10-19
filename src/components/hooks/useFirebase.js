@@ -1,5 +1,5 @@
 import initializeAuthentication from "../../firebase/firebase.init";
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
 
 
@@ -7,8 +7,10 @@ initializeAuthentication();
 const useFirebase = () => {
 
     const [user, setUser] = useState({});
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     const [isLoading, setIsloading] = useState(true);
-    // const [error, setError] = useState();
+    const [error, setError] = useState();
 
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
@@ -31,6 +33,39 @@ const useFirebase = () => {
         });
     }, []);
 
+    const registration = e => {
+        e.preventDefault();
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                setUser(user);
+                setError('');
+            })
+            .catch((error) => {
+                setError(error.message);
+            });
+
+    }
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+
+    }
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+
+    }
+
+    const login = () => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                const user = result.user;
+                setError('');
+                console.log(user);
+
+            })
+    }
+
     const logOut = () => {
         setIsloading(true)
         signOut(auth)
@@ -44,7 +79,14 @@ const useFirebase = () => {
         googleSignIn,
         user,
         logOut,
-        isLoading
+        isLoading,
+        registration,
+        login,
+        handleEmailChange,
+        handlePasswordChange,
+        error
+
+
     }
 };
 

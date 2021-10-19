@@ -19,10 +19,10 @@ const Home = () => {
 
             <div id="services">
                 <h2 className="text-center my-5">Our <span className="span">Services</span> </h2>
-                <div class="row row-cols-1 row-cols-md-3 g-5 container mx-auto my-5" >
+                <div className="row row-cols-1 row-cols-md-3 g-5 container mx-auto my-5" >
 
                     {
-                        services.slice(0, 6).map(service => <Services
+                        services.slice(0, 6)?.map(service => <Services
                             key={service.id}
                             service={service}
                         >
@@ -37,7 +37,7 @@ const Home = () => {
             <div id="doctor">
                 <h2 className="text-center my-5"> Meet Our <span className="span">Doctors</span> </h2>
 
-                <div class="row row-cols-1 row-cols-md-3 g-5 container mx-auto my-5" >
+                <div className="row row-cols-1 row-cols-md-3 g-5 container mx-auto my-5" >
 
                     {
                         services.map(service => <Doctor

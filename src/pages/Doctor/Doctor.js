@@ -7,12 +7,12 @@ const Doctor = ({ service }) => {
     return (
 
         <>
-            <div class="col" id="services">
-                <div class="card">
-                    <img src={imgDoctor} class="card-img-top height=300 " alt="..." />
-                    <div class="card-body">
+            <div className="col" id="services">
+                <div className="card">
+                    <img src={imgDoctor} className="card-img-top height=300 " alt="..." />
+                    <div className="card-body">
                         <p>{specialities}</p>
-                        <h5 class="card-title">{doctorName}</h5>
+                        <h5 className="card-title">{doctorName}</h5>
 
                         <small>{days}</small> <br />
                         <Link to={`/serviceDetails/${id}`}>
