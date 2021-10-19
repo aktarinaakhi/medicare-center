@@ -10,6 +10,7 @@ import ServiceDetails from './pages/ServiceDetails/ServiceDetails';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import NotFound from './pages/NotFound/NotFound';
 import Contact from './pages/Contact/Contact';
+import Faq from './pages/Faq/Faq';
 
 
 function App() {
@@ -34,6 +35,10 @@ function App() {
 
           <Route exact path="/contact">
             <Contact></Contact>
+          </Route>
+
+          <Route exact path="/faq">
+            <Faq>s</Faq>
           </Route>
 
           <Route exact path="/login">

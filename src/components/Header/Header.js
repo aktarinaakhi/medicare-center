@@ -20,6 +20,7 @@ const Header = () => {
                         <Nav.Link className="text-light" as={HashLink} to="/home#services">Services</Nav.Link>
                         <Nav.Link className="text-light" as={HashLink} to="/home#doctor">Doctor</Nav.Link>
                         <Nav.Link className="text-light" as={HashLink} to="/contact">Contact</Nav.Link>
+                        <Nav.Link className="text-light" as={HashLink} to="/faq">FAQ</Nav.Link>
                     </Nav>
                     <Nav>
                         {
