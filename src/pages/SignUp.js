@@ -20,8 +20,8 @@ const SignUp = () => {
     return (
 
         <>
-            <div className="w-50 mx-auto mt-5 text-center" >
-                <h1>Please <span className="span mb-5">Register</span></h1>
+            <div className="w-25 mx-auto mt-5 text-center" >
+                <h1 className="mb-5">Join <span className="span">WITH US</span></h1>
                 <div className="row my-4">
                     <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
                     <div className="col-sm-10">
@@ -38,13 +38,13 @@ const SignUp = () => {
                 <button onClick={registration} type="submit" className=" mb-3 btn-regular">Sign up</button> <br />
 
             </div>
-            <div className="text-center">
+            <div className="mx-auto w-25 text-center">
                 <span className="mt-4">Already have an account? </span>
                 <Link to="/login">login</Link>
-                <div> -------------------or-------------------</div>
+                <div className="d-flex ms-5 ps-5 mt-3"><hr className="w-25" /> <small>OR</small> <hr className="w-25" /></div>
                 <div className="btn-div mt-4">
-                    <button onClick={handleGoogleSignIn} className="button px-4"><i className="bi bi-google"></i>Google</button> <br />
-                    <button className="button"><i className="bi bi-facebook"></i>Facebook</button>
+                    <button onClick={handleGoogleSignIn} className="button"><i className="bi bi-google"></i>Continue with Google</button> <br />
+                    <button className="button"><i className="bi bi-facebook"></i>Continue with Facebook</button>
                 </div>
                 <h5 className="text-success my-3 text-center">Why crete an Account ?</h5>
                 <p className="text-xl-center mb-5">By creating this account, you agree to our <span className="text-success">Privacy Policy</span> &  <span className="text-success"> Cookie Policy </span> </p>
