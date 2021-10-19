@@ -7,7 +7,7 @@
   "doctorName" : "SUSSIE WOLFF",
   "imgDoctor" : "https://images.unsplash.com/photo-1591604021695-0c69b7c05981?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGRvY3RvcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
   "specialities" : "Pediatrician",
-  "days" : "sat, sun, mon, tues, wednes, thirs, fri"
+  "days" : "sat, sun, mon, tues, wednes"
 	
 },
 {
@@ -18,7 +18,7 @@
 	"doctorName" : "PROF. DR. HAM NAZMUL AHSAN",
 	"imgDoctor" : "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGRvY3RvcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
 	"specialities" : "Medicine",
-  "days" : "sat, sun, mon, tues, wednes, thirs, fri"
+  "days" : "sat, sun, mon, thirs, fri"
 },
 {
   "id" :3,
@@ -28,7 +28,7 @@
 	"doctorName" : "PROF. DR. MD. ZAHIR UDDIN",
 	"imgDoctor" : "https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZG9jdG9yfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
 	"specialities" : "Medicine",
-  "days" : "sat, sun, mon, tues, wednes, thirs, fri"
+  "days" : "sat, tues, wednes, thirs, fri"
 },
 {
   "id" :4,
@@ -38,7 +38,7 @@
 	"doctorName" : "PROF. DR. SAYEBA AKHTER",
 	"imgDoctor" : "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZG9jdG9yfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
 	"specialities" : "Gynaecology",
-  "days" : "sat, sun, mon, tues, wednes, thirs, fri"
+  "days" : "mon, tues, wednes, thirs, fri"
 },
 {
   "id" :5,
@@ -48,7 +48,7 @@
 	"doctorName" : "DR. UTPALA MAZUMDER",
 	"imgDoctor" : "https://media.istockphoto.com/photos/pediatrician-talks-with-patients-mother-picture-id1293681788?b=1&k=20&m=1293681788&s=170667a&w=0&h=86FIfZB_E9W0-1olORv2I6P5Fvd6EUMZUVPyiMfVrAY=",
 	"specialities" : "Gynaecology",
-  "days" : "sat, sun, mon, tues, wednes, thirs, fri"
+  "days" : "sat, tues, wednes, thirs, fri"
 },
 {
   "id" :6,
@@ -58,7 +58,7 @@
 	"doctorName" : "PROF. DR. SK. NURUL ALAM",
 	"imgDoctor" : "https://media.istockphoto.com/photos/portrait-of-a-confident-young-doctor-using-a-digital-tablet-picture-id1267013720?b=1&k=20&m=1267013720&s=170667a&w=0&h=fplvckjYyHoZIQ6O6p01dVF7pdrBYkBTP4rrhMx58v8=",
 	"specialities" : "Orthopaedic",
-  "days" : "sat, sun, mon, tues, wednes, thirs, fri"
+  "days" : "sat, sun, mon, tues, fri"
 },
 {
   "id" :7,
@@ -68,7 +68,7 @@
     "Description" : "Medicare Medicine corner is a well-known retailer of medicine in Bangladesh. We provide all kinds of life saving medicine, which are available in all branches of Popular Diagnostics Ltd. Our aim is to provide good medicine and best service quality to the patients.",
 	"imgDoctor" : "https://media.istockphoto.com/photos/doctor-clicking-on-a-laptop-before-her-picture-id1292777576?b=1&k=20&m=1292777576&s=170667a&w=0&h=Tg1ASn3aw19DgyqjGaaWqJmPeXiDRaU1LW8c83Y5tbw=",
 	"specialities" : "Orthopaedic",
-  "days" : "sat, sun, mon, tues, wednes, thirs, fri"
+  "days" : "sun, mon, tues, wednes, thurs"
 },
 {
   "id" :8,
@@ -78,7 +78,7 @@
 	"doctorName" : "DR. C.M. KUDRAT-E- KHODA",
 	"imgDoctor" : "https://media.istockphoto.com/photos/portrait-of-middle-aged-asian-female-doctor-standing-in-hospital-picture-id1271328839?b=1&k=20&m=1271328839&s=170667a&w=0&h=SIMzwoe8eu43OoY4M3ElZCMxW9MgDbZbVzMhh4VY2zM=",
 	"specialities" : "Cardiology",
-  "days" : "sat, sun, mon, tues, wednes, thirs, fri"
+  "days" : "sat, sun, mon, tues, fri"
 },
 {
   "id" :9,
@@ -88,6 +88,6 @@
 	"doctorName" : "PROF. DR. M. A. JAIGIRDAR",
 	"imgDoctor" : "https://media.istockphoto.com/photos/pediatrician-talks-with-patients-mother-picture-id1293681788?b=1&k=20&m=1293681788&s=170667a&w=0&h=86FIfZB_E9W0-1olORv2I6P5Fvd6EUMZUVPyiMfVrAY=",
 	"specialities" : "Child/Paediatrics" ,
-  "days" : "sat, sun, mon, tues, wednes, thirs, fri"                                                                                  
+  "days" : "sat, sun, mon, tues,fri"                                                                                  
 }
 ]

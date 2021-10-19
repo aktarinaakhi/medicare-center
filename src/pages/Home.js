@@ -14,7 +14,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
+        <div id="home">
             <Banner></Banner>
 
             <div id="services">
@@ -35,7 +35,7 @@ const Home = () => {
             <OurTeam></OurTeam>
 
             <div id="doctor">
-                <h2 className="text-center my-5">Our <span className="span">Doctors</span> </h2>
+                <h2 className="text-center my-5"> Meet Our <span className="span">Doctors</span> </h2>
 
                 <div class="row row-cols-1 row-cols-md-3 g-5 container mx-auto my-5" >
 

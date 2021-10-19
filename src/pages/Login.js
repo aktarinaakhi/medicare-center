@@ -5,7 +5,7 @@ import useAuth from '../components/hooks/useAuth';
 import "./Login.css"
 
 const Login = () => {
-    const { googleSignIn } = useAuth();
+    const { googleSignIn, setIsloading } = useAuth();
     const history = useHistory();
     const location = useLocation();
     const redirect_url = location.state?.from || '/home'
@@ -15,6 +15,8 @@ const Login = () => {
             .then(result => {
                 history.push(redirect_url);
             });
+        // .try { () => setIsloading(false) }
+
 
     };
     return (

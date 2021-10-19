@@ -6,13 +6,15 @@ import { useEffect, useState } from "react";
 initializeAuthentication();
 const useFirebase = () => {
 
-    const [user, setUser] = useState();
+    const [user, setUser] = useState({});
+    const [isLoading, setIsloading] = useState(true);
     // const [error, setError] = useState();
 
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
 
     const googleSignIn = () => {
+        setIsloading(true);
         return signInWithPopup(auth, googleProvider)
 
     }
@@ -22,19 +24,27 @@ const useFirebase = () => {
             if (user) {
                 setUser(user);
             }
+            else {
+                setUser({})
+            }
+            setIsloading(false)
         });
     }, []);
 
     const logOut = () => {
-        signOut(auth).then(() => {
-            setUser({});
-        })
+        setIsloading(true)
+        signOut(auth)
+            .then(() => {
+                setUser({});
+            })
+            .finally(() => setIsloading(false))
     }
 
     return {
         googleSignIn,
         user,
-        logOut
+        logOut,
+        isLoading
     }
 };
 

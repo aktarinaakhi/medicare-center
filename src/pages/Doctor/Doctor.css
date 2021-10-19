@@ -1,5 +1,6 @@
 .doctor-btn {
   border: none;
   color: tomato;
-  padding: 3px 15px;
+  /* padding: 3px 15px; */
+  font-weight: 600;
 }

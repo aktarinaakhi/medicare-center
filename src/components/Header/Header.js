@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../images/medicare-logo-white.png'
 import useAuth from '../hooks/useAuth';
+import { HashLink } from 'react-router-hash-link';
 import './Header.css'
 
 const Header = () => {
@@ -15,10 +16,10 @@ const Header = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link className="text-light" as={Link} to="/home">Home</Nav.Link>
-                        <Nav.Link className="text-light" as={Link} to="/home#services">Services</Nav.Link>
-                        <Nav.Link className="text-light" as={Link} to="/doctor">Doctor</Nav.Link>
-                        <Nav.Link className="text-light" as={Link} to="/contact">Contact</Nav.Link>
+                        <Nav.Link className="text-light" as={HashLink} to="/home#home">Home</Nav.Link>
+                        <Nav.Link className="text-light" as={HashLink} to="/home#services">Services</Nav.Link>
+                        <Nav.Link className="text-light" as={HashLink} to="/home#doctor">Doctor</Nav.Link>
+                        <Nav.Link className="text-light" as={HashLink} to="/contact">Contact</Nav.Link>
                     </Nav>
                     <Nav>
                         {
