@@ -14,4 +14,10 @@ img {
   img {
     height: 500px;
   }
+  .title {
+    font-size: 25px;
+  }
+  .description {
+    font-size: 15px;
+  }
 }

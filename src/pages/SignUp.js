@@ -4,7 +4,7 @@ import useAuth from '../components/hooks/useAuth';
 import { useHistory, useLocation } from 'react-router'
 
 const SignUp = () => {
-    const { googleSignIn, registration, setIsloading, handleEmailChange, handlePasswordChange, error } = useAuth();
+    const { googleSignIn, registration, setIsloading, handleEmailChange, handlePasswordChange, error, facebookSignIn } = useAuth();
     const history = useHistory();
     const location = useLocation();
     const redirect_url = location.state?.from || '/home'
@@ -44,7 +44,7 @@ const SignUp = () => {
                 <div className="d-flex ms-5 ps-5 mt-3"><hr className="w-25" /> <small>OR</small> <hr className="w-25" /></div>
                 <div className="btn-div mt-4">
                     <button onClick={handleGoogleSignIn} className="button"><i className="bi bi-google"></i>Continue with Google</button> <br />
-                    <button className="button"><i className="bi bi-facebook"></i>Continue with Facebook</button>
+                    <button onClick={facebookSignIn} className="button"><i className="bi bi-facebook"></i>Continue with Facebook</button>
                 </div>
                 <h5 className="text-success my-3 text-center">Why crete an Account ?</h5>
                 <p className="text-xl-center mb-5">By creating this account, you agree to our <span className="text-success">Privacy Policy</span> &  <span className="text-success"> Cookie Policy </span> </p>
