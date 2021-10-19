@@ -26,18 +26,18 @@ const ServiceDetails = () => {
 
 
 
-        <div class="card mb-3">
-            <h2>Service details {serviceId}</h2>
+        <div class="card my-5 container p-5">
+            {/* <h2>Service details {serviceId}</h2> */}
 
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src={singleService?.imgService} class="img-fluid rounded-start" alt="..." />
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 ps-4">
                     <div class="card-body">
                         <h5 class="card-title">{singleService?.serviceName}</h5>
                         <p class="card-text">{singleService?.description}</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <p class="card-text"><small class="text-muted">Surgury Specialist : <strong>{singleService?.doctorName}</strong></small></p>
                     </div>
                 </div>
             </div>

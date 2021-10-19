@@ -1,14 +1,5 @@
-.input-field {
-  padding: 4px 40px;
-  border-radius: 10px;
-  border: 1px solid gray;
-}
-
-.btn-social-media {
-  border: none;
-  padding: 10px 0px;
-  border-radius: 5px;
-  font-size: 20px;
+.form-container {
+  width: 25%;
 }
 .bi {
   margin-right: 30px;
@@ -24,4 +15,16 @@
 .card img {
   height: 300px;
   width: 100%;
+}
+@media only screen and (max-width: 688px) {
+  .form-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .button {
+    font-size: 15px;
+  }
+  .card img {
+    height: 200px;
+  }
 }

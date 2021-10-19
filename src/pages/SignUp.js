@@ -20,7 +20,7 @@ const SignUp = () => {
     return (
 
         <>
-            <div className="w-25 mx-auto mt-5 text-center" >
+            <div className="form-container mx-auto mt-5 text-center" >
                 <h1 className="mb-5">Join <span className="span">WITH US</span></h1>
                 <div className="row my-4">
                     <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
@@ -38,7 +38,7 @@ const SignUp = () => {
                 <button onClick={registration} type="submit" className=" mb-3 btn-regular">Sign up</button> <br />
 
             </div>
-            <div className="mx-auto w-25 text-center">
+            <div className="mx-auto form-container text-center">
                 <span className="mt-4">Already have an account? </span>
                 <Link to="/login">login</Link>
                 <div className="d-flex ms-5 ps-5 mt-3"><hr className="w-25" /> <small>OR</small> <hr className="w-25" /></div>

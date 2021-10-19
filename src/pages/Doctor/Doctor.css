@@ -1,6 +1,11 @@
 .doctor-btn {
   border: none;
   color: tomato;
-  /* padding: 3px 15px; */
   font-weight: 600;
+}
+
+@media only screen and (max-width: 688px) {
+  .card img {
+    height: 250px;
+  }
 }

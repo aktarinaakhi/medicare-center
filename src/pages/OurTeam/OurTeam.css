@@ -22,5 +22,6 @@
 @media only screen and (max-width: 688px) {
   .our-team {
     display: block;
+    padding: 5px 40px;
   }
 }

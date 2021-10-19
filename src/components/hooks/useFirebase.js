@@ -27,8 +27,11 @@ const useFirebase = () => {
         signInWithPopup(auth, facebookProvider)
             .then((result) => {
                 const user = result.user;
-                // setUser(user);
+                setUser(user);
                 console.log(user);
+            })
+            .catch(error => {
+                setError(error.message);
             })
 
     }
@@ -92,11 +95,13 @@ const useFirebase = () => {
         user,
         logOut,
         isLoading,
+        setIsloading,
         registration,
         login,
         handleEmailChange,
         handlePasswordChange,
         error,
+        setError,
         facebookSignIn
 
 
