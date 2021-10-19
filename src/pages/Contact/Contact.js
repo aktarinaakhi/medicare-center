@@ -4,7 +4,7 @@ import './Contact.css';
 const Contact = () => {
     return (
         <div className="container my-5 contact-container">
-            <div className="w-50">
+            <div className="w-50 mx-auto contact-form">
                 <div class="mb-3">
                     <label for="formGroupExampleInput" class="form-label">Name</label>
                     <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter name" required />
@@ -19,7 +19,7 @@ const Contact = () => {
                 </div>
                 <button type="button" class="btn-regular mb-5">Send Message</button>
             </div>
-            <div className="w-50 ms-5">
+            <div className="w-50 ms-5 mx-auto">
                 <div>
                     <h2>Get in Touch</h2>
                     <p>Medicare started its journey in June 1983 and within few days due to its accuracy of the reports and quality of the service, Medicare became an unparallel symbol of reliability and trust from the end of respective doctors and the people of our country. To get any service and support from us, please contact us.</p>

@@ -19,7 +19,7 @@ const Login = () => {
     };
     return (
         <>
-            <div className="form-container mx-auto mt-5 text-center" >
+            <div className="form-container mx-auto mt-5" >
                 <h1 className="mb-5">Sign In to <span className="span">MEDICARE</span></h1>
                 <div className="row my-4">
                     <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
@@ -37,7 +37,7 @@ const Login = () => {
 
             </div>
 
-            <div className="mx-auto form-container text-center">
+            <div className="mx-auto form-container">
                 <span className="mt-4">New to medicare center? </span>
                 <Link to="/signup">Create account</Link>
                 <div className="d-flex ms-5 ps-5 mt-3"><hr className="w-25" /> <small>OR</small> <hr className="w-25" /></div>

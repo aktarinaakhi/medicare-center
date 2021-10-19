@@ -19,12 +19,15 @@
 @media only screen and (max-width: 688px) {
   .form-container {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 40px;
   }
   .button {
     font-size: 15px;
   }
   .card img {
     height: 200px;
+  }
+  .bi {
+    margin-right: 15px;
   }
 }
