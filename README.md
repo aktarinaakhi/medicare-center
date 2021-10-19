@@ -1,4 +1,4 @@
-# Welcome to Medicare center diagonostic center
+# Welcome to Medicare diagonostic center
 
 Check it out [website link here](https://medicare-center.web.app/).
 
@@ -6,7 +6,7 @@ Check it out [website link here](https://medicare-center.web.app/).
 
 - To render the world standard diagnostic service to the people of the country at an affordable cost and in turn to limit the outflow of the patient abroad at the expense of heard earn foreign currency by providing quality diagnostic services.
 - Out door basis treatment by renowned General Practitioners, Consultants and Professors in different medical fields.
-- o promote Health Education & Medical Services.
+- To promote Health Education & Medical Services.
 - Day care Centre for follow-up cardiac renal and oncology patients.
 - To build a full fledged specialized (Tertiary) Hospital.
 
