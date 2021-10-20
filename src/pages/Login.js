@@ -5,7 +5,7 @@ import useAuth from '../components/hooks/useAuth';
 import "./Login.css"
 
 const Login = () => {
-    const { googleSignIn, setIsloading, login, handleEmailChange, handlePasswordChange, facebookSignIn } = useAuth();
+    const { googleSignIn, setIsloading, login, handleEmailChange, handlePasswordChange, facebookSignIn, error, setError } = useAuth();
     const history = useHistory();
     const location = useLocation();
     const redirect_url = location.state?.from || '/home'
@@ -14,6 +14,9 @@ const Login = () => {
         googleSignIn()
             .then(result => {
                 history.push(redirect_url);
+            })
+            .catch((error) => {
+                setError(error.message);
             })
             .finally(() => setIsloading(false));
     };
@@ -33,8 +36,9 @@ const Login = () => {
                         <input onChange={handlePasswordChange} type="password" className="form-control" id="inputPassword3" required />
                     </div>
                 </div>
-                <button onClick={login} type="submit" className=" my-3 btn-regular">login</button> <br />
 
+                <p className="text-danger">{error}</p>
+                <button onClick={login} type="submit" className=" my-3 btn-regular">login</button> <br />
             </div>
 
             <div className="mx-auto form-container">

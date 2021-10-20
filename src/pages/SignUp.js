@@ -4,7 +4,7 @@ import useAuth from '../components/hooks/useAuth';
 import { useHistory, useLocation } from 'react-router'
 
 const SignUp = () => {
-    const { googleSignIn, registration, setIsloading, handleEmailChange, handlePasswordChange, error, facebookSignIn } = useAuth();
+    const { googleSignIn, registration, setIsloading, handleEmailChange, handlePasswordChange, error, facebookSignIn, setError, emailVarification } = useAuth();
     const history = useHistory();
     const location = useLocation();
     const redirect_url = location.state?.from || '/home'
@@ -13,6 +13,9 @@ const SignUp = () => {
         googleSignIn()
             .then(result => {
                 history.push(redirect_url);
+            })
+            .catch((error) => {
+                setError(error.message);
             })
             .finally(() => setIsloading(false));
     };

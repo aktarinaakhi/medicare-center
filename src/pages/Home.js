@@ -18,7 +18,7 @@ const Home = () => {
             <Banner></Banner>
 
             <div id="services">
-                <h2 className="text-center my-5">Our <span className="span">Services</span> </h2>
+                <h2 className="text-center mt-5">Our <span className="span">Services</span> </h2>
                 <div className="row row-cols-1 row-cols-md-3 g-5 container mx-auto my-5" >
 
                     {
@@ -35,7 +35,7 @@ const Home = () => {
             <OurTeam></OurTeam>
 
             <div id="doctor">
-                <h2 className="text-center my-5"> Meet Our <span className="span">Doctors</span> </h2>
+                <h2 className="text-center mt-5"> Meet Our <span className="span">Doctors</span> </h2>
 
                 <div className="row row-cols-1 row-cols-md-3 g-5 container mx-auto my-5" >
 

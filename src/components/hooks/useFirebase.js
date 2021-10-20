@@ -1,5 +1,5 @@
 import initializeAuthentication from "../../firebase/firebase.init";
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, FacebookAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword, FacebookAuthProvider, sendEmailVerification } from "firebase/auth";
 import { useEffect, useState } from "react";
 
 
@@ -28,7 +28,7 @@ const useFirebase = () => {
             .then((result) => {
                 const user = result.user;
                 setUser(user);
-                console.log(user);
+                // console.log(user);
             })
             .catch(error => {
                 setError(error.message);
@@ -48,6 +48,14 @@ const useFirebase = () => {
         });
     }, []);
 
+
+    const emailVarification = () => {
+        sendEmailVerification(auth.currentUser)
+            .then((result) => {
+                console.log(result);
+            });
+    }
+
     const registration = e => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
@@ -55,20 +63,21 @@ const useFirebase = () => {
                 const user = result.user;
                 setUser(user);
                 setError('');
+                emailVarification();
             })
             .catch((error) => {
                 setError(error.message);
             });
-
     }
+
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
-
+        // e.target.value = '';
     }
+
     const handlePasswordChange = (e) => {
         setPassword(e.target.value);
-
     }
 
     const login = () => {
@@ -79,6 +88,11 @@ const useFirebase = () => {
                 console.log(user);
 
             })
+            .catch((error) => {
+                setError(error.message);
+            });
+        setError('');
+
     }
 
     const logOut = () => {
@@ -86,6 +100,9 @@ const useFirebase = () => {
         signOut(auth)
             .then(() => {
                 setUser({});
+            })
+            .catch((error) => {
+                setError(error.message);
             })
             .finally(() => setIsloading(false))
     }

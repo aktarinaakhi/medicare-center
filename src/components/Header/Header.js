@@ -33,12 +33,13 @@ const Header = () => {
                                 <div className="d-flex">
                                     <button onClick={logOut} className="btn-login px-3 me-3">Logout</button>
                                     <p className="text-light">{user.displayName}</p>
+
                                 </div>
                         }
                     </Nav>
                 </Navbar.Collapse>
             </Container>
-        </Navbar >
+        </Navbar>
     );
 };
 
