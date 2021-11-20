@@ -27,8 +27,6 @@ const ServiceDetails = () => {
 
 
         <div class="card my-5 container p-5">
-            {/* <h2>Service details {serviceId}</h2> */}
-
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src={singleService?.imgService} class="img-fluid rounded-start" alt="..." />
